@@ -1,96 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descomplica</title>
+    <title>Formulário de Reserva</title>
 </head>
-
 <body>
-    <h1>Reserva</h1>
-    <p>
-        Vivamus varius ligula risus. Etiam non feugiat risus, id dapibus arcu.
-        Aliquam eget nulla lacinia, efficitur ex ut, efficitur lorem.
-        Aenean sagittis orci eget ex viverra sollicitudin. In suscipit quam vel magna facilisis,
-        sed dictum quam volutpat. Nulla ac urna diam. Cras tristique, lorem a gravida venenatis,
-        leo nunc aliquam quam, eu molestie dui nunc a ex. Quisque ac mauris eu mi ultrices malesuada.
-    </p>
-    <form action="/signup" method="post">
+    <section>
+        <h1>Formulário de Reserva</h1>
         <p>
-            <fieldset>
-                <label>Nome</label><br>
-                <input type="text" name="first_name">
-            </fieldset>
+            Vivamus varius ligula risus. Etiam non feugiat risus, id dapibus arcu.
+            Aliquam eget nulla lacinia, efficitur ex ut, efficitur lorem.
+            Aenean sagittis orci eget ex viverra sollicitudin. In suscipit quam vel magna facilisis,
+            sed dictum quam volutpat. Nulla ac urna diam. Cras tristique, lorem a gravida venenatis,
+            leo nunc aliquam quam, eu molestie dui nunc a ex. Quisque ac mauris eu mi ultrices malesuada.
         </p>
-        <p>
-            <fieldset>            
-                <label>Email</label><br>
-                <input type="email" name="email" required>
-            </fieldset>
-        </p>
-        <p>
-            <fieldset>            
-                <label>Serviços Desejados</label><br>
-                <select>
-                    <option>Compra de Passagens</option>
-                    <option>Reserva de Hospedagem</option>
-                    <option>Aluguel de Veículos</option>
-                </select>
-            </fieldset>
-        </p>
-        <p>
-            <fieldset>  
-                <label>Forma de Pagamento</label><br>
-                <label>
-                    <input type="radio" name="title" value="mr">
-                    Cartão de Crédito
-                </label>
-                <label>
-                    <input type="radio" name="title" value="mrs">
-                    Boleto
-                </label>
-                <label>
-                    <input type="radio" name="title" value="miss">
-                    PIX
-                </label>
-            </fieldset>
-        </p>
-        <p>
-            <fieldset>  
-                <label>
-                    <input type="submit" name="submit" value="submit">
-                </label>
-            </fieldset>
-        </p>
+    </section>
+    <form action="/" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <label>
+                <input type="checkbox" name="buyTicket" value="buyTicket">Compra de Passagens
+            </label>
+            <label>
+                <input type="checkbox" name="booking" value="booking">Reserva de Hospedagem
+            </label>
+            <label>
+                <input type="checkbox" name="rentCar" value="rentCar">Aluguel de Veículos
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <label>
+                <input type="radio" name="pay" value="creditCard">Cartão de Crédito
+            </label>
+            <label>
+                <input type="radio" name="pay" value="boleto">Boleto
+            </label>
+            <label>
+                <input type="radio" name="pay" value="pix">PIX
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+            <select id="service" name="service">
+                <option value="aVista">À Vista</option>
+                <option value="fiveTimes">Cinco Vezes Sem Juros</option>
+                <option value="tenTimes">Dez Vezes Com Juros</option>
+            </select>
+        </fieldset>
+        <br>
+        <label for="comment">Comentário</label>
+        <br>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="submit" name="submit" value="Salvar">
+        <br>
+        <br>
     </form>
     <footer>
         Reserva Footer.
     </footer>
 </body>
-
 </html>
-
-
-<!-- 
-1º passo
-Crie uma nova página HTML chamada “reserva.html”.
-
-2º passo
-Na página, você deve criar um formulário de reserva de viagem com os seguintes campos: 
-Nome, Email, Serviços Desejados (uma caixa de seleção com opções como Compra de Passagens, Reserva de Hospedagem, Aluguel de Veículos), 
-Forma de Pagamento (um botão de rádio com opções como Cartão de Crédito, Boleto, PIX) e 
-Prazo de Pagamento (uma lista suspensa com opções como À Vista, Cinco Vezes Sem Juros, Dez Vezes Com Juros).
-
-3º passo
-Utilize as tags <form>, <input>, <label>, <select>, <option>, <fieldset> e <textarea> para criar o formulário e seus campos.
-
-4º passo
-Adicione semântica ao formulário utilizando a tag <fieldset> para agrupar os campos do formulário.
-
-5º passo
-Adicione um botão de envio ao formulário utilizando a tag <input> com o tipo “submit”.
-
-6º passo
-Salve seu trabalho e visualize a página no navegador. 
--->
