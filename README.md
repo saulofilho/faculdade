@@ -1,3 +1,3 @@
 # README
 
-Ciências da Computação.
+Códigos referentes as atividades do curso de graduação da Ciência da Computação.
